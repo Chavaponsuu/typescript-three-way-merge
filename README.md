@@ -79,7 +79,7 @@ The solution does not call any sorting function.
 ## Example
 
 ```typescript
-import { merge } from './src/merge.js';
+import { merge } from "./src/merge.js";
 
 const result = merge([1, 4, 7], [2, 5, 8], [9, 6, 3, 0]);
 console.log(result); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -99,23 +99,5 @@ typescript-three-way-merge/
 ├── tsconfig.json
 └── README.md
 ```
-
-## Publish to a public GitHub repository
-
-1. Create a **public, empty** repository on GitHub named `typescript-three-way-merge`. Do not initialize it with a README (this project has one).
-2. From this directory, run (replace `YOUR_USERNAME`):
-
-```bash
-git init
-git add .
-git commit -m "Implement three-way array merge with unit tests"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/typescript-three-way-merge.git
-git push -u origin main
-```
-
-The public repository link will be `https://github.com/YOUR_USERNAME/typescript-three-way-merge` after you push.
-
-## Notes
 
 This implementation assumes the inputs are already ordered as described. It does not re-order or validate the inputs. Negative integer inputs also work, despite the original problem's nonnegative assumption.
