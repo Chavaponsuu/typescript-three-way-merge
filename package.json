@@ -1,0 +1,22 @@
+{
+  "name": "typescript-three-way-merge",
+  "version": "1.0.0",
+  "description": "Merge two ascending arrays and one descending array into a single ascending array without using sort().",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/index.js",
+    "dev": "npm run build && npm run start",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "test:watch": "npm run build && node --test --watch dist/tests/*.test.js",
+    "clean": "node -e \"import('node:fs').then(({rmSync}) => rmSync('dist', { recursive: true, force: true }))\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
